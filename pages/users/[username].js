@@ -1,8 +1,6 @@
 import fetch from "isomorphic-unfetch";
-import { useRouter } from "next/router";
 
 export default ({ username, quote }) => {
-  const router = useRouter();
   return (
     <div>
       User is <i>{username}</i>. The user favorite quote is:
@@ -30,6 +28,6 @@ export async function getStaticPaths() {
         },
       },
     ],
-    fallback: false,
+    fallback: true,
   };
 }

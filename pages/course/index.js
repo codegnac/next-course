@@ -40,6 +40,11 @@ export default () => {
               <a>Profile</a>
             </Link>
           </li>
+          <li>
+            <Link href="/posts/[...params]" as={`/posts/1`}>
+              <a>Post</a>
+            </Link>
+          </li>
         </ul>
         <button onClick={() => setShowComponent(!showComponent)}>
           Toggle component
