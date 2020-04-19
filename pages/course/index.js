@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Link from "next/link";
+import Date from "../../components/Date";
 
 export default () => {
   const username = "codegnac";
+  const [showComponent, setShowComponent] = useState(false);
 
   return (
     <>
@@ -32,6 +35,10 @@ export default () => {
             </Link>
           </li>
         </ul>
+        <button onClick={() => setShowComponent(!showComponent)}>
+          Toggle component
+        </button>
+        {showComponent && <Date />}
       </section>
     </>
   );
