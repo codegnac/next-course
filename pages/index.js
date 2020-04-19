@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from "next/head";
+import styles from "../assets/homepage.module.css";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <p className="description">
+        <p className={styles.description}>
           Get started by editing <code>pages/index.js</code>
         </p>
 
@@ -183,6 +184,10 @@ export default function Home() {
             flex-direction: column;
           }
         }
+
+        p {
+          color: gray;
+        }
       `}</style>
 
       <style jsx global>{`
@@ -200,5 +205,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
