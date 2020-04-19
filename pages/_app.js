@@ -1,7 +1,7 @@
 import "../assets/styles.css";
 import Header from "../components/Header";
 
-export default ({ Component, pageProps }) => {
+const CustomApp = ({ Component, pageProps }) => {
   return (
     <>
       <style jsx global>{`
@@ -23,3 +23,11 @@ export default ({ Component, pageProps }) => {
     </>
   );
 };
+
+CustomApp.getInitialProps = async ({ AppTree, Component, ctx, router }) => {
+  return {
+    someProp: true,
+  };
+};
+
+export default CustomApp;
