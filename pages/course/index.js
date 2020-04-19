@@ -1,10 +1,16 @@
 import { useState } from "react";
 import Link from "next/link";
-import Date from "../../components/Date";
+import dynamic from "next/dynamic";
+// import Date from "../../components/Date";
+
+const Date = dynamic(() => import("../../components/Date"), {
+  loading: () => <p>Loading date...</p>,
+  ssr: false,
+});
 
 export default () => {
   const username = "codegnac";
-  const [showComponent, setShowComponent] = useState(false);
+  const [showComponent, setShowComponent] = useState(true);
 
   return (
     <>

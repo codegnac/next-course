@@ -1,3 +1,6 @@
 import moment from "moment";
 
-export default () => <p>{moment().toString()}</p>;
+export default () => {
+  console.log(window);
+  return <p>{moment().toString()}</p>;
+};
