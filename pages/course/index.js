@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 // import Date from "../../components/Date";
 
 const Date = dynamic(() => import("../../components/Date"), {
@@ -22,6 +23,9 @@ export default () => {
           padding: 0 16px;
         }
       `}</style>
+      <Head>
+        <title>Course index</title>
+      </Head>
       <section>
         <h2>Codegnac.com Courses</h2>
         <ul>

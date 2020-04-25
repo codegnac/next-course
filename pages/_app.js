@@ -1,3 +1,4 @@
+import Head from "next/head";
 import "../assets/styles.css";
 import Header from "../components/Header";
 
@@ -18,6 +19,9 @@ export default ({ Component, pageProps }) => {
           box-sizing: border-box;
         }
       `}</style>
+      <Head>
+        <title>Default title</title>
+      </Head>
       <Header />
       <Component {...pageProps} />
     </>
