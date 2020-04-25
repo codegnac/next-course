@@ -28,6 +28,7 @@ export default () => {
       </Head>
       <section>
         <h2>Codegnac.com Courses</h2>
+        <p>This is deployed!</p>
         <ul>
           <li>
             <Link prefetch={false} href="/course/javascript">
